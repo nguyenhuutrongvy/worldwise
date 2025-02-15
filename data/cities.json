@@ -1,0 +1,100 @@
+{
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "PT",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "ES",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "DE",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Dalat",
+      "country": "Vietnam",
+      "emoji": "VN",
+      "date": "2025-02-12T09:24:11.863Z",
+      "notes": "Dalat University",
+      "position": {
+        "lat": 11.938927,
+        "lng": 108.44435
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Beijing",
+      "country": "China",
+      "emoji": "CN",
+      "date": "2025-02-13T07:45:28.023Z",
+      "notes": "Beijing",
+      "position": {
+        "lat": 39.67340342200571,
+        "lng": 116.4648152787901
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Firozpur Jhirka",
+      "country": "India",
+      "emoji": "IN",
+      "date": "2025-02-13T07:46:48.619Z",
+      "notes": "India again",
+      "position": {
+        "lat": 27.83897128962996,
+        "lng": 76.9974753801683
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Mundo Novo",
+      "country": "Brazil",
+      "emoji": "BR",
+      "date": "2025-02-13T07:54:18.706Z",
+      "notes": "Brazil",
+      "position": {
+        "lat": -13.921118950363205,
+        "lng": -50.246136197985685
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "FR",
+      "date": "2025-02-14T07:53:00.959Z",
+      "notes": "France",
+      "position": {
+        "lat": 48.84554218704185,
+        "lng": 2.3493864502794186
+      },
+      "id": 98443206
+    }
+  ]
+}
