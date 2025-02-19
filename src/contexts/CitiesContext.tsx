@@ -1,6 +1,7 @@
 import {
   createContext,
   ReactNode,
+  useCallback,
   useContext,
   useEffect,
   useReducer,
@@ -23,36 +24,36 @@ const initialState: State = {
   error: '',
 };
 
-export const loadingAction = () =>
+const loadingAction = () =>
   ({
     type: 'loading',
   }) as const;
 
-export const gotCitiesAction = (cities: City[]) =>
+const gotCitiesAction = (cities: City[]) =>
   ({
     type: 'cities/loaded',
     payload: cities,
   }) as const;
 
-export const gotCityAction = (city: City) =>
+const gotCityAction = (city: City) =>
   ({
     type: 'city/loaded',
     payload: city,
   }) as const;
 
-export const createdCityAction = (city: City) =>
+const createdCityAction = (city: City) =>
   ({
     type: 'city/created',
     payload: city,
   }) as const;
 
-export const deletedCityAction = (id: number) =>
+const deletedCityAction = (id: number) =>
   ({
     type: 'city/deleted',
     payload: id,
   }) as const;
 
-export const rejectedAction = (error: string) =>
+const rejectedAction = (error: string) =>
   ({
     type: 'rejected',
     payload: error,
@@ -156,22 +157,25 @@ function CitiesProvider({ children }: { children: ReactNode }) {
     fetchCities();
   }, []);
 
-  async function getCity(id: number) {
-    if (id === currentCity?.id) {
-      return;
-    }
+  const getCity = useCallback(
+    async function getCity(id: number) {
+      if (id === currentCity?.id) {
+        return;
+      }
 
-    dispatch(loadingAction());
+      dispatch(loadingAction());
 
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
 
-      dispatch(gotCityAction(data));
-    } catch {
-      dispatch(rejectedAction('There was an error while loading city...'));
-    }
-  }
+        dispatch(gotCityAction(data));
+      } catch {
+        dispatch(rejectedAction('There was an error while loading city...'));
+      }
+    },
+    [currentCity?.id]
+  );
 
   async function createCity(newCity: City) {
     dispatch(loadingAction());

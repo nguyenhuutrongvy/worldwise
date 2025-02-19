@@ -16,7 +16,7 @@ function City() {
 
   useEffect(() => {
     getCity(Number(id));
-  }, [id]);
+  }, [id, getCity]);
 
   if (!currentCity) {
     return;
